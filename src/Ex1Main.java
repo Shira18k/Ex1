@@ -7,6 +7,6 @@ import Ex1.Ex1;
  */
 public class Ex1Main {
     public static void main(String[] args) {
-        System.out.println(Ex1.isNumber("234"));
+        System.out.println(Ex1.isNumber("2b11"));
     }
 }

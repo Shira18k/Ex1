@@ -23,6 +23,11 @@ public class Ex1 {
         }
         return ans;
     }
+    public static char gatBase (String a) {
+        if (!isNumber(a)){return 'X';}
+        if (a.contains("b")) {return a.charAt(a.indexOf('b')+1);}
+        return 'A';
+    }
 
         /**
          * Convert the given number (num) to a decimal representation (as int).
@@ -30,7 +35,7 @@ public class Ex1 {
          * @param num a String representing a number in basis [2,16]
          * @return
          */
-        public static int number2Int(String num) { //פו שבודקת האם המס שהוכנס נכון בצורה שלו
+        public static int number2Int(String num) {
             int ans = -1;
 
             return ans;
@@ -42,31 +47,44 @@ public class Ex1 {
          */
         public static boolean isNumber(String a) { //num
             boolean ans = true;
-            char base= a.charAt(a.indexOf('b')+1);
-            if (charToInt(base)==-1){return false;}
+            char base = a.charAt(a.indexOf('b') + 1);
+            if (charToInt(base) == -1) {
+                return false;
+            }
             String numValue;
             if (a.contains("b")) {
-                numValue = a.substring(0,a.indexOf("b"));
+                numValue = a.substring(0, a.indexOf("b"));
+            } else {
+                numValue = a;
+                base = 'A';
             }
-            else {numValue =a;
-            base = 'A';}
-           for (char c : numValue.toCharArray())
-           {
-               if(charToInt(c)==-1){return false;}
-               if (charToInt(c)>= charToInt(base)) {return false;}
-           }
-
-            int counter =0;
-            for (char c :a.toCharArray())
-            {
-                if (c=='b'){counter++;}
+            for (char c : numValue.toCharArray()) {
+                if (charToInt(c) == -1) {
+                    return false;
+                }
+                if (charToInt(c) >= charToInt(base)) {
+                    return false;
+                }
             }
-            if (counter>1){return false;}
 
-            if (counter==0){
-                for (char c : numValue.toCharArray()){
-                    if ((charToInt(c)==-1)){return false;}
-                    if (charToInt(c)>= 10) {return false;}
+            int counter = 0;
+            for (char c : a.toCharArray()) {
+                if (c == 'b') {
+                    counter++;
+                }
+            }
+            if (counter > 1) {
+                return false;
+            }
+
+            if (counter == 0) {
+                for (char c : numValue.toCharArray()) {
+                    if ((charToInt(c) == -1)) {
+                        return false;
+                    }
+                    if (charToInt(c) >= 10) {
+                        return false;
+                    }
                 }
             }
             return ans;
@@ -80,11 +98,10 @@ public class Ex1 {
          * @param base the basis [2,16]
          * @return a String representing a number (in base) equals to num, or an empty String (in case of wrong input).
          */
-        public static String int2Number(int num, int base) {
+        public static String int2Number(int num, int base){ //פו שממירה לבסיס 10{
             String ans = "";
-            // add your code here
-
-            ////////////////////
+            int sum = 0;
+          //  int P =
             return ans;
         }
 
