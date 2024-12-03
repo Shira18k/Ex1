@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Test;
+import Ex1.Ex1;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

@@ -1,3 +1,4 @@
+package Ex1;
 /**
  * This class represents a simple solution for Ex1.
  * As defined here: https://docs.google.com/document/d/1AJ9wtnL1qdEs4DAKqBlO1bXCM6r6GJ_J/r/edit/edit
@@ -11,17 +12,27 @@
  * You should implement the following static functions:
  */
 public class Ex1 {
+    public static int charToInt (char c) { //פו עזר שמחזירה לי את ערך האינדקס עבור תו/ מס.
+        int ans = -1;
+        char [] arr = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','G'};
+        for (int i=0 ;  i<arr.length; i++){ //הגדרה של סך האינדקסים שקיימים לי
+            if (arr[i]==c) {
+                ans=i;
+            }
+
+        }
+        return ans;
+    }
+
         /**
          * Convert the given number (num) to a decimal representation (as int).
          * It the given number is not in a valid format returns -1.
          * @param num a String representing a number in basis [2,16]
          * @return
          */
-        public static int number2Int(String num) {
+        public static int number2Int(String num) { //פו שבודקת האם המס שהוכנס נכון בצורה שלו
             int ans = -1;
-            // add your code here
 
-            ////////////////////
             return ans;
         }
         /**
@@ -29,11 +40,35 @@ public class Ex1 {
          * @param a a String representing a number
          * @return true iff the given String is in a number format
          */
-        public static boolean isNumber(String a) {
+        public static boolean isNumber(String a) { //num
             boolean ans = true;
-            // add your code here
+            char base= a.charAt(a.indexOf('b')+1);
+            if (charToInt(base)==-1){return false;}
+            String numValue;
+            if (a.contains("b")) {
+                numValue = a.substring(0,a.indexOf("b"));
+            }
+            else {numValue =a;
+            base = 'A';}
+           for (char c : numValue.toCharArray())
+           {
+               if(charToInt(c)==-1){return false;}
+               if (charToInt(c)>= charToInt(base)) {return false;}
+           }
 
-            ////////////////////
+            int counter =0;
+            for (char c :a.toCharArray())
+            {
+                if (c=='b'){counter++;}
+            }
+            if (counter>1){return false;}
+
+            if (counter==0){
+                for (char c : numValue.toCharArray()){
+                    if ((charToInt(c)==-1)){return false;}
+                    if (charToInt(c)>= 10) {return false;}
+                }
+            }
             return ans;
         }
 
