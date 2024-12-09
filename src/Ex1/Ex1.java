@@ -12,6 +12,7 @@ package Ex1;
  * You should implement the following static functions:
  */
 public class Ex1 {
+
     public static int charToInt (char c) { //פו עזר שמחזירה לי את ערך האינדקס עבור תו/ מס.
         int ans = -1;
         char [] arr = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','G'};
@@ -35,11 +36,17 @@ public class Ex1 {
          * @param num a String representing a number in basis [2,16]
          * @return
          */
-        public static int number2Int(String num) {
+        public static int number2Int(String num) { //פו המרת הnum לייצוג עשרוני
             int ans = -1;
+            if (isNumber(num)) {
+                num = num.contains("b") ? num.substring(0, num.indexOf('b')) : num; //מהו num
+                ans = Integer.parseInt(num); // המרה ישירה לבסיס 10 מקצר את החישוב לעשרוני, לברר אם מספיק
+
+            } else {return ans;}
 
             return ans;
         }
+
         /**
          * This static function checks if the given String (g) is in a valid "number" format.
          * @param a a String representing a number
@@ -113,9 +120,8 @@ public class Ex1 {
          */
         public static boolean equals(String n1, String n2) {
             boolean ans = true;
-            // add your code here
 
-            ////////////////////
+
             return ans;
         }
 
