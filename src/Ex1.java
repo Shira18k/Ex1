@@ -11,30 +11,100 @@
  * You should implement the following static functions:
  */
 public class Ex1 {
+
+    public static int charToInt (char c) { //פו עזר שמחזירה לי את ערך האינדקס עבור תו/ מס.
+        int ans = -1;
+        char [] arr = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','G'};
+        for (int i=0 ;  i<arr.length; i++){ //הגדרה של סך האינדקסים שקיימים לי
+            if (arr[i]==c) {
+                ans=i;
+            }
+
+        }
+        return ans;
+    }
+    public static char gatBase (String a) { //פו עזר מהו בסיס
+
+        if (!isNumber(a)){return 'X';}
+        if (a.contains("b")) {return a.charAt(a.indexOf('b')+1);}
+        return 'A';
+    }
+
         /**
          * Convert the given number (num) to a decimal representation (as int).
          * It the given number is not in a valid format returns -1.
          * @param num a String representing a number in basis [2,16]
          * @return
          */
-        public static int number2Int(String num) {
+        public static int number2Int(String num) { //פו המרת הnum לייצוג עשרוני
             int ans = -1;
-            // add your code here
 
-            ////////////////////
+            if (isNumber(num) && isNumber(base)) {
+                if (num.contains("b")) {
+                num =  num.substring(0, num.indexOf("b")) ;};//מהו num;
+                if (base.contains("b")) {
+                    base = base.substring(num.indexOf("b")+1);}
+                ans = Integer.parseInt(num,base); // המרה ישירה לבסיס 10 מקצר את החישוב לעשרוני, לברר אם מספיק
+
+            } else {return ans;}
+
             return ans;
         }
+
         /**
          * This static function checks if the given String (g) is in a valid "number" format.
          * @param a a String representing a number
          * @return true iff the given String is in a number format
          */
-        public static boolean isNumber(String a) {
+        public static boolean isNumber(String a) { //num
             boolean ans = true;
-            // add your code here
 
-            ////////////////////
+            char base = a.charAt(a.indexOf('b') + 1);
+            if (charToInt(base) == -1) {
+                return false;
+            }
+
+            String numValue;
+            if (a.contains("b")) {
+                numValue = a.substring(0, a.indexOf("b"));
+            } else {
+                numValue = a;
+                base = 'A';
+            }
+            for (char c : numValue.toCharArray()) {
+                if (charToInt(c) == -1) {
+                    return false;
+                }
+                if (charToInt(c) >= charToInt(base)) {
+                    return false;
+                }
+            }
+
+            int counter = 0;
+            for (char c : a.toCharArray()) {
+                if (c == 'b') {
+                    counter++;
+                }
+            }
+            if (counter > 1) {
+                return false;
+            }
+
+            if (counter == 0) {
+                for (char c : numValue.toCharArray()) {
+                    if ((charToInt(c) == -1)) {
+                        return false;
+                    }
+                    if (charToInt(c) >= 10) {
+                        return false;
+                    }
+                }
+            }
+            if (a.length() != a.indexOf('b') + 2) {
+                return false;
+            }
             return ans;
+
         }
 
         /**
@@ -45,11 +115,10 @@ public class Ex1 {
          * @param base the basis [2,16]
          * @return a String representing a number (in base) equals to num, or an empty String (in case of wrong input).
          */
-        public static String int2Number(int num, int base) {
+        public static String int2Number(int num, int base){ //פו שממירה לבסיס 10{
             String ans = "";
-            // add your code here
-
-            ////////////////////
+            int sum = 0;
+          //  int P =
             return ans;
         }
 
@@ -61,9 +130,8 @@ public class Ex1 {
          */
         public static boolean equals(String n1, String n2) {
             boolean ans = true;
-            // add your code here
 
-            ////////////////////
+
             return ans;
         }
 
