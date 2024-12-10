@@ -24,7 +24,7 @@ public class Ex1 {
         }
         return ans;
     }
-    public static char gatBase (String a) {
+    public static char gatBase (String a) { //פו עזר מהו בסיס
         if (!isNumber(a)){return 'X';}
         if (a.contains("b")) {return a.charAt(a.indexOf('b')+1);}
         return 'A';
@@ -38,8 +38,9 @@ public class Ex1 {
          */
         public static int number2Int(String num) { //פו המרת הnum לייצוג עשרוני
             int ans = -1;
+
             if (isNumber(num)) {
-                num = num.contains("b") ? num.substring(0, num.indexOf('b')) : num; //מהו num
+                num = num.contains("b") ? num.substring(0, num.indexOf('b')) : num; //מהו num;
                 ans = Integer.parseInt(num); // המרה ישירה לבסיס 10 מקצר את החישוב לעשרוני, לברר אם מספיק
 
             } else {return ans;}
@@ -54,10 +55,12 @@ public class Ex1 {
          */
         public static boolean isNumber(String a) { //num
             boolean ans = true;
+
             char base = a.charAt(a.indexOf('b') + 1);
             if (charToInt(base) == -1) {
                 return false;
             }
+
             String numValue;
             if (a.contains("b")) {
                 numValue = a.substring(0, a.indexOf("b"));
@@ -94,7 +97,11 @@ public class Ex1 {
                     }
                 }
             }
+            if (a.length() != a.indexOf('b') + 2) {
+                return false;
+            }
             return ans;
+
         }
 
         /**
