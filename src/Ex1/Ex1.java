@@ -25,6 +25,7 @@ public class Ex1 {
         return ans;
     }
     public static char gatBase (String a) { //פו עזר מהו בסיס
+
         if (!isNumber(a)){return 'X';}
         if (a.contains("b")) {return a.charAt(a.indexOf('b')+1);}
         return 'A';
@@ -39,9 +40,12 @@ public class Ex1 {
         public static int number2Int(String num) { //פו המרת הnum לייצוג עשרוני
             int ans = -1;
 
-            if (isNumber(num)) {
-                num = num.contains("b") ? num.substring(0, num.indexOf('b')) : num; //מהו num;
-                ans = Integer.parseInt(num); // המרה ישירה לבסיס 10 מקצר את החישוב לעשרוני, לברר אם מספיק
+            if (isNumber(num) && isNumber(base)) {
+                if (num.contains("b")) {
+                num =  num.substring(0, num.indexOf("b")) ;};//מהו num;
+                if (base.contains("b")) {
+                    base = base.substring(num.indexOf("b")+1);}
+                ans = Integer.parseInt(num,base); // המרה ישירה לבסיס 10 מקצר את החישוב לעשרוני, לברר אם מספיק
 
             } else {return ans;}
 
