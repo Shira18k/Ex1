@@ -23,6 +23,10 @@ public class Ex1 {
         }
         return ans;
     }
+    public static char int2Num (int x) { //פו עזר שמחזירה לי את ערך האינדקס עבור תו/ מס.
+        char[] arr = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G'};
+        return arr[x];
+    }
 
     public static char gatBase(String a) { //פו עזר מהו בסיס
 
@@ -60,13 +64,11 @@ public class Ex1 {
                 base = 10;
             }
             int sum = 0;
-            int counter = 0;
             for (int i = 0; i < numvalue.length(); i++) {
                 int x = (charToInt(numvalue.charAt(i)));
-                sum = (int) (x * (Math.pow(base, (numvalue.length() - i - 1))));
-                counter = counter + sum;
+                sum += (int) (x * (Math.pow(base, (numvalue.length() - i - 1))));
             }
-            ans = counter;
+            ans = sum;
         }
         return ans;
     }
@@ -121,7 +123,7 @@ public class Ex1 {
                 }
             }
         }
-        if (a.length() != a.indexOf('b') + 2) {
+        if ((a.length() != a.indexOf('b') + 2) || a.indexOf('b') == 0){
             return false;
         }
         return ans;
@@ -152,12 +154,15 @@ public class Ex1 {
                 // את שאריות החלוקה של המס בבסיס וכל פעם המס יתעדכן למס החדש שהוא המס חלקי הבסיס.
                 // לדוג num=25 base=5 לכן 25%5=0 שארית והמס החדש יהיה ב25/5=5 ועכשיו נבדוק עבור 5 ונוסיף וכן הלאה.
 
+            }else {
+                String counter = "";
                 while (num != 0) {
-                    String counter = "";
                     int x = num % base;
-                    counter = "" + ((char) (x)); //בעייתי לפרק
+                    counter = int2Num(x) + counter; //בעייתי לפרק
                     num = num / base;
-                }}
+                }
+                ans = counter;
+            }
         }return ans;
     }
 
@@ -172,7 +177,9 @@ public class Ex1 {
      */
     public static boolean equals(String n1, String n2) {
         boolean ans = true;
-
+        if ( number2Int(n1) != number2Int(n2)){
+            return false;
+        }
 
         return ans;
     }
@@ -187,13 +194,11 @@ public class Ex1 {
      */
     public static int maxIndex(String[] arr) {
         int ans = 0;
-        if (arr == null || arr.length == 0) {
-             ans = 0;
-
-        }else{
-
-        ans = arr.length - 1;}
-
+        for (int i = 0; i < arr.length; i++) {
+            if(number2Int(arr[i]) > number2Int(arr[ans])){
+                ans = i;
+            }
+        }
         return ans;
     }
 }
