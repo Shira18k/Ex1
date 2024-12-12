@@ -12,10 +12,10 @@
  */
 public class Ex1 {
 
-    public static int charToInt(char c) { //פו עזר שמחזירה לי את ערך האינדקס עבור תו/ מס.
+    public static int charToInt(char c) { //the fun return the index value of the char in the array.
         int ans = -1;
         char[] arr = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G'};
-        for (int i = 0; i < arr.length; i++) { //הגדרה של סך האינדקסים שקיימים לי
+        for (int i = 0; i < arr.length; i++) {
             if (arr[i] == c) {
                 ans = i;
             }
@@ -23,21 +23,21 @@ public class Ex1 {
         }
         return ans;
     }
-    public static char int2Num (int x) { //פו עזר שמחזירה לי את ערך האינדקס עבור תו/ מס.
+    public static char int2Num (int x) { //the fun return the char of the index value in the array.
         char[] arr = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G'};
         return arr[x];
     }
 
-    public static char gatBase(String a) { //פו עזר מהו בסיס
-
-        if (!isNumber(a)) {
-            return 'X';
-        }
-        if (a.contains("b")) {
-            return a.charAt(a.indexOf('b') + 1);
-        }
-        return 'A';
-    }
+//    public static char gatBase(String a) { //פו עזר מהו בסיס
+//
+//        if (!isNumber(a)) {
+//            return 'X';
+//        }
+//        if (a.contains("b")) {
+//            return a.charAt(a.indexOf('b') + 1);
+//        }
+//        return 'A';
+//    }
 
     /**
      * Convert the given number (num) to a decimal representation (as int).
@@ -46,19 +46,19 @@ public class Ex1 {
      * @param num a String representing a number in basis [2,16]
      * @return
      */
-    public static int number2Int(String num) { //פו המרת הnum לייצוג עשרוני
+    public static int number2Int(String num) { //the fun conversion some num in right format to base 10.
         int ans = -1;
-        if (!isNumber(num)) { //if num belong to isNumber, it means that numvalue<base , one b
+        if (!isNumber(num)) {
             return ans;
 
         } else {
-            String numvalue = "";  // אתחול משתנה
+            String numvalue = "";
             int base = 0;
 
             if (num.contains("b")) {
                 numvalue = num.substring(0, num.indexOf("b")); //what is numvalue
-                base = charToInt(num.charAt(num.indexOf('b') + 1)); //for index of b+1= base- convert the char
-                // to int in fun charToInt
+                base = charToInt(num.charAt(num.indexOf('b') + 1)); //what is base
+
             } else {
                 numvalue = num;
                 base = 10;
@@ -66,7 +66,7 @@ public class Ex1 {
             int sum = 0;
             for (int i = 0; i < numvalue.length(); i++) {
                 int x = (charToInt(numvalue.charAt(i)));
-                sum += (int) (x * (Math.pow(base, (numvalue.length() - i - 1))));
+                sum += (int) (x * (Math.pow(base, (numvalue.length() - i - 1)))); // the act of conversion some num to base 10
             }
             ans = sum;
         }
@@ -79,7 +79,7 @@ public class Ex1 {
      * @param a a String representing a number
      * @return true iff the given String is in a number format
      */
-    public static boolean isNumber(String a) { //num
+    public static boolean isNumber(String a) { //fun of what is the right format.
         boolean ans = true;
 
         char base = a.charAt(a.indexOf('b') + 1);
@@ -139,7 +139,7 @@ public class Ex1 {
      * @param base the basis [2,16]
      * @return a String representing a number (in base) equals to num, or an empty String (in case of wrong input).
      */
-    public static String int2Number(int num, int base) { //פו שממירה לבסיס 10{
+    public static String int2Number(int num, int base){ // the fun conversion some numvalue at base 10 to new base between [2,16]..
 
         String ans = "";
 
@@ -150,15 +150,12 @@ public class Ex1 {
 
             if (base > 16 || base < 2) {
                 ans = "is not a base";
-                // עכשיו המס העשרוני והבסיס החדש תקינים. כדי לקבל את המס העשרוני בבסיס החדש נאסוף
-                // את שאריות החלוקה של המס בבסיס וכל פעם המס יתעדכן למס החדש שהוא המס חלקי הבסיס.
-                // לדוג num=25 base=5 לכן 25%5=0 שארית והמס החדש יהיה ב25/5=5 ועכשיו נבדוק עבור 5 ונוסיף וכן הלאה.
 
             }else {
                 String counter = "";
                 while (num != 0) {
                     int x = num % base;
-                    counter = int2Num(x) + counter; //בעייתי לפרק
+                    counter = int2Num(x) + counter;
                     num = num / base;
                 }
                 ans = counter;
@@ -175,7 +172,7 @@ public class Ex1 {
      * @param n2 second number
      * @return true iff the two numbers have the same values.
      */
-    public static boolean equals(String n1, String n2) {
+    public static boolean equals(String n1, String n2) { // fun of Comparison between to numbers with different bases.
         boolean ans = true;
         if ( number2Int(n1) != number2Int(n2)){
             return false;
@@ -192,7 +189,7 @@ public class Ex1 {
      * @param arr an array of numbers
      * @return the index in the array in with the largest number (in value).
      */
-    public static int maxIndex(String[] arr) {
+    public static int maxIndex(String[] arr) { // fun of given tha index of the maxvalue.
         int ans = 0;
         for (int i = 0; i < arr.length; i++) {
             if(number2Int(arr[i]) > number2Int(arr[ans])){
