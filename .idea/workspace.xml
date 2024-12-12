@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="887c5574-9ddd-4ef7-85d2-ffa150f5fedc" name="Changes" comment="add the tests and updates for the main and the functions.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="887c5574-9ddd-4ef7-85d2-ffa150f5fedc" name="Changes" comment="fixed the main" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,35 +44,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Ex1Main.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "true",
-    "JAR Application.Ex1Sol.jar.executor": "Run",
-    "JUnit.Ex1Test.computeNumberTest.executor": "Run",
-    "JUnit.Ex1Test.equalTest2.executor": "Run",
-    "JUnit.Ex1Test.executor": "Debug",
-    "JUnit.Ex1Test.int2NumberTest.executor": "Run",
-    "JUnit.Ex1Test.int2NumberTest1.executor": "Run",
-    "JUnit.Ex1Test.int2NumberTest2.executor": "Run",
-    "JUnit.Ex1Test.int2NumberTest3.executor": "Debug",
-    "JUnit.Ex1Test.isBasisNumberTest.executor": "Run",
-    "JUnit.Ex1Test.maxIndexTest1.executor": "Run",
-    "JUnit.Ex1Test.maxIndexTest2.executor": "Run",
-    "JUnit.Ex1Test.number2IntTest1.executor": "Run",
-    "JUnit.Ex1Test.number2IntTest2.executor": "Debug",
-    "JUnit.Ex1Test.numdber2Int.executor": "Run",
-    "JUnit.Ex1Test.testEqualNumbersSameBase.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/shira/IdeaProjects/Ex1/src"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Ex1Main.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;JAR Application.Ex1Sol.jar.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Ex1Test.computeNumberTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Ex1Test.equalTest2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Ex1Test.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.Ex1Test.int2NumberTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Ex1Test.int2NumberTest1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Ex1Test.int2NumberTest2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Ex1Test.int2NumberTest3.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.Ex1Test.isBasisNumberTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Ex1Test.maxIndexTest1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Ex1Test.maxIndexTest2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Ex1Test.number2IntTest1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Ex1Test.number2IntTest2.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.Ex1Test.numdber2Int.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Ex1Test.testEqualNumbersSameBase.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/shira/IdeaProjects/Ex1/src&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\shira\IdeaProjects\Ex1\src" />
@@ -276,7 +274,15 @@
       <option name="project" value="LOCAL‎" />
       <updated>1734030632009</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL‎-00017" summary="fixed the main">
+      <option name="closed" value="true" />
+      <created>1734032309873</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL‎-00017" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1734032309873</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -289,6 +295,7 @@
     <MESSAGE value="add the rest functions" />
     <MESSAGE value="add the final Ex1Main" />
     <MESSAGE value="add the tests and updates for the main and the functions." />
-    <option name="LAST_COMMIT_MESSAGE" value="add the tests and updates for the main and the functions." />
+    <MESSAGE value="fixed the main" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed the main" />
   </component>
 </project>
