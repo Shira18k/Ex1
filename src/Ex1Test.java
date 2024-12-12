@@ -58,6 +58,8 @@ public class Ex1Test {
 
     @Test
     void int2NumberTest3() {
+        int num2 =13;
+        int base = 2;
         assertEquals("1101", Ex1.int2Number(13, 2));
     }
 
