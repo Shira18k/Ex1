@@ -1,0 +1,20 @@
+Index: src/Ex1Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.Scanner;\r\nimport Ex1.Ex1;\r\n/**\r\n * Intro2CS, Ex1 - very basic \"main template\"\r\n * Make sure your implementation of this main performs as the Ex1Sol.jar solution implement all needed functions.\r\n *\r\n */\r\npublic class Ex1Main {\r\n    public static void main(String[] args) {\r\n        System.out.println(Ex1.isNumber(\"2b11\"));\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Ex1Main.java b/src/Ex1Main.java
+--- a/src/Ex1Main.java	(revision 2746c174f16301e62dd740498e946ec6d81feb8c)
++++ b/src/Ex1Main.java	(date 1733742109218)
+@@ -7,6 +7,8 @@
+  */
+ public class Ex1Main {
+     public static void main(String[] args) {
+-        System.out.println(Ex1.isNumber("2b11"));
++        System.out.println(Ex1.isNumber("34b7"));
++        System.out.println(Ex1.number2Int("01Bb2"));
++
+     }
+ }
