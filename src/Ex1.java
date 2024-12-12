@@ -23,7 +23,7 @@ public class Ex1 {
         }
         return ans;
     }
-    public static char int2Num (int x) { //the fun return the char of the index value in the array.
+    public static char intToNum (int x) { //the fun return the char of the index value in the array.
         char[] arr = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G'};
         return arr[x];
     }
@@ -155,7 +155,7 @@ public class Ex1 {
                 String counter = "";
                 while (num != 0) {
                     int x = num % base;
-                    counter = int2Num(x) + counter;
+                    counter = intToNum(x) + counter;
                     num = num / base;
                 }
                 ans = counter;

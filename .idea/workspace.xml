@@ -7,7 +7,7 @@
     <list default="true" id="887c5574-9ddd-4ef7-85d2-ffa150f5fedc" name="Changes" comment="add the final Ex1Main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +228,23 @@
       <option name="project" value="LOCAL‎" />
       <updated>1733994726642</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL‎-00013" summary="add the final Ex1Main">
+      <option name="closed" value="true" />
+      <created>1733995959295</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL‎-00013" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1733995959295</updated>
+    </task>
+    <task id="LOCAL‎-00014" summary="add the final Ex1Main">
+      <option name="closed" value="true" />
+      <created>1733996254723</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL‎-00014" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1733996254723</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
