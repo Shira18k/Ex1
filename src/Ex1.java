@@ -12,7 +12,8 @@
  */
 public class Ex1 {
 
-    public static int charToInt(char c) { //the fun return the index value of the char in the array.
+    //'help fun' - return the index value of the char in the array.
+    public static int charToInt(char c) {
         int ans = -1;
         char[] arr = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G'};
         for (int i = 0; i < arr.length; i++) {
@@ -23,21 +24,12 @@ public class Ex1 {
         }
         return ans;
     }
-    public static char intToNum (int x) { //the fun return the char of the index value in the array.
+
+    //'help fun' - return the char of the index value in the array.
+    public static char intToNum(int x) {
         char[] arr = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G'};
         return arr[x];
     }
-
-//    public static char gatBase(String a) { //פו עזר מהו בסיס
-//
-//        if (!isNumber(a)) {
-//            return 'X';
-//        }
-//        if (a.contains("b")) {
-//            return a.charAt(a.indexOf('b') + 1);
-//        }
-//        return 'A';
-//    }
 
     /**
      * Convert the given number (num) to a decimal representation (as int).
@@ -46,23 +38,25 @@ public class Ex1 {
      * @param num a String representing a number in basis [2,16]
      * @return
      */
-    public static int number2Int(String num) { //the fun conversion some num in right format to base 10.
+
+    //the fun conversion some num in right format to base 10.
+    public static int number2Int(String num) {
         int ans = -1;
         if (!isNumber(num)) {
             return ans;
 
         } else {
             String numvalue = "";
-            int base = 0;
+            int base = 10;
 
             if (num.contains("b")) {
-                numvalue = num.substring(0, num.indexOf("b")); //what is numvalue
+                numvalue = num.substring(0, num.indexOf("b"));      //what is numvalue
                 base = charToInt(num.charAt(num.indexOf('b') + 1)); //what is base
 
             } else {
-                numvalue = num;
-                base = 10;
+                numvalue = num;                                    // if num not contain 'b'.
             }
+
             int sum = 0;
             for (int i = 0; i < numvalue.length(); i++) {
                 int x = (charToInt(numvalue.charAt(i)));
@@ -79,9 +73,15 @@ public class Ex1 {
      * @param a a String representing a number
      * @return true iff the given String is in a number format
      */
-    public static boolean isNumber(String a) { //fun of what is the right format.
-        boolean ans = true;
 
+    //fun of what is the right format.
+    public static boolean isNumber(String a) {
+        boolean ans = true;
+        for (char c : a.toCharArray()) {
+            if (!a.contains("b") && c < charToInt('A')) {
+                return true;
+            }
+        }
         char base = a.charAt(a.indexOf('b') + 1);
         if (charToInt(base) == -1) {
             return false;
@@ -91,6 +91,7 @@ public class Ex1 {
         if (a.contains("b")) {
             numValue = a.substring(0, a.indexOf("b"));
         } else {
+
             numValue = a;
             base = 'A';
         }
@@ -123,7 +124,7 @@ public class Ex1 {
                 }
             }
         }
-        if ((a.length() != a.indexOf('b') + 2) || a.indexOf('b') == 0){
+        if ((a.length() != a.indexOf('b') + 2) || a.indexOf('b') == 0) {
             return false;
         }
         return ans;
@@ -139,7 +140,9 @@ public class Ex1 {
      * @param base the basis [2,16]
      * @return a String representing a number (in base) equals to num, or an empty String (in case of wrong input).
      */
-    public static String int2Number(int num, int base){ // the fun conversion some numvalue at base 10 to new base between [2,16]..
+
+    // the fun conversion some numvalue at base 10 to new base between [2,16].
+    public static String int2Number(int num, int base) {
 
         String ans = "";
 
@@ -151,18 +154,18 @@ public class Ex1 {
             if (base > 16 || base < 2) {
                 ans = "is not a base";
 
-            }else {
+            } else {
                 String counter = "";
                 while (num != 0) {
                     int x = num % base;
                     counter = intToNum(x) + counter;
                     num = num / base;
                 }
-                ans = counter;
+                ans = counter + "b" + base;
             }
-        }return ans;
+        }
+        return ans;
     }
-
 
 
     /**
@@ -172,9 +175,11 @@ public class Ex1 {
      * @param n2 second number
      * @return true iff the two numbers have the same values.
      */
-    public static boolean equals(String n1, String n2) { // fun of Comparison between to numbers with different bases.
+
+    // fun of Comparison between to numbers with different bases.
+    public static boolean equals(String n1, String n2) {
         boolean ans = true;
-        if ( number2Int(n1) != number2Int(n2)){
+        if (number2Int(n1) != number2Int(n2)) {
             return false;
         }
 
@@ -189,14 +194,22 @@ public class Ex1 {
      * @param arr an array of numbers
      * @return the index in the array in with the largest number (in value).
      */
-    public static int maxIndex(String[] arr) { // fun of given tha index of the maxvalue.
+
+    // fun of given tha index of the maxvalue.
+    public static int maxIndex(String[] arr) {
         int ans = 0;
+
         for (int i = 0; i < arr.length; i++) {
-            if(number2Int(arr[i]) > number2Int(arr[ans])){
-                ans = i;
+            if (!isNumber(arr[i])) {
+                return ans;
+            } else {
+                if (number2Int(arr[i]) > number2Int(arr[ans])) {
+                    ans = i;
+                }
             }
         }
         return ans;
     }
 }
+
 
