@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="887c5574-9ddd-4ef7-85d2-ffa150f5fedc" name="Changes" comment="fixes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,45 +46,56 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Ex1Main.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;JAR Application.Ex1Sol.jar.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Ex1Test.computeNumberTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Ex1Test.equalTest2.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Ex1Test.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.Ex1Test.int2NumberTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Ex1Test.int2NumberTest1.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Ex1Test.int2NumberTest2.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Ex1Test.int2NumberTest3.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.Ex1Test.isBasisNumberTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Ex1Test.maxIndexTest1.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Ex1Test.maxIndexTest2.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Ex1Test.number2IntTest1.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Ex1Test.number2IntTest2.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.Ex1Test.numdber2Int.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Ex1Test.testEqualNumbersSameBase.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/shira/IdeaProjects/Ex1/src&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Ex1Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "true",
+    "JAR Application.Ex1Sol.jar.executor": "Run",
+    "JUnit.Ex1Test.charToIntTest.executor": "Run",
+    "JUnit.Ex1Test.computeNumberTest.executor": "Run",
+    "JUnit.Ex1Test.equalTest2.executor": "Run",
+    "JUnit.Ex1Test.executor": "Debug",
+    "JUnit.Ex1Test.int2NumberTest.executor": "Run",
+    "JUnit.Ex1Test.int2NumberTest1.executor": "Run",
+    "JUnit.Ex1Test.int2NumberTest2.executor": "Run",
+    "JUnit.Ex1Test.int2NumberTest3.executor": "Debug",
+    "JUnit.Ex1Test.isBasisNumberTest.executor": "Run",
+    "JUnit.Ex1Test.maxIndexTest1.executor": "Run",
+    "JUnit.Ex1Test.maxIndexTest2.executor": "Run",
+    "JUnit.Ex1Test.number2IntTest1.executor": "Run",
+    "JUnit.Ex1Test.number2IntTest2.executor": "Debug",
+    "JUnit.Ex1Test.numdber2Int.executor": "Run",
+    "JUnit.Ex1Test.testEqualNumbersSameBase.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/shira/IdeaProjects/Ex1/src"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\shira\IdeaProjects\Ex1\src" />
       <recent name="C:\Users\shira\IdeaProjects\Ex1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Ex1Main">
+  <component name="RunManager" selected="JUnit.Ex1Test.intToCharTest">
     <configuration name="Ex1Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Ex1Main" />
       <module name="Ex1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ex1Test.charToIntTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Ex1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Ex1Test" />
+      <option name="METHOD_NAME" value="charToIntTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -100,21 +110,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ex1Test.isBasisNumberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Ex1Test.intToCharTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Ex1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Ex1Test" />
-      <option name="METHOD_NAME" value="isBasisNumberTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Ex1Test.number2IntTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Ex1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Ex1Test" />
-      <option name="METHOD_NAME" value="number2IntTest1" />
+      <option name="METHOD_NAME" value="intToCharTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -132,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Ex1Test.intToCharTest" />
+        <item itemvalue="JUnit.Ex1Test.charToIntTest" />
         <item itemvalue="Application.Ex1Main" />
         <item itemvalue="JUnit.Ex1Test.numdber2Int" />
         <item itemvalue="JUnit.Ex1Test.equalTest2" />
-        <item itemvalue="JUnit.Ex1Test.isBasisNumberTest" />
-        <item itemvalue="JUnit.Ex1Test.number2IntTest1" />
       </list>
     </recent_temporary>
   </component>
@@ -325,7 +325,15 @@
       <option name="project" value="LOCAL‎" />
       <updated>1734033114540</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL‎-00023" summary="fixes">
+      <option name="closed" value="true" />
+      <created>1734035179197</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL‎-00023" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1734035179197</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

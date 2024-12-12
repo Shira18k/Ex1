@@ -88,4 +88,27 @@ public class Ex1Test {
         String n2 = "3330b4";
         assertFalse(Ex1.equals(n1, n2));
     }
+
+    @Test
+    void charToIntTest(){
+        assertEquals(0, Ex1.charToInt('0'));
+        assertEquals(1, Ex1.charToInt('1'));
+        assertEquals(9, Ex1.charToInt('9'));
+
+
+        assertEquals(10, Ex1.charToInt('A'));
+        assertEquals(15, Ex1.charToInt('F'));
+        assertEquals(16, Ex1.charToInt('G'));
+    }
+
+    @Test
+    void intToCharTest() {
+        assertEquals('0', Ex1.intToNum(0));
+        assertEquals('5', Ex1.intToNum(5));
+        assertEquals('9', Ex1.intToNum(9));
+        assertEquals('A', Ex1.intToNum(10));
+        assertEquals('F', Ex1.intToNum(15));
+        assertEquals('G', Ex1.intToNum(16));
+
+    }
 }
